@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логин Студента</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header-box">
+            <h1>Логин Студента</h1>
+        </div>
+        <form class="login-form" onsubmit="event.preventDefault(); window.location.href='student 1.html';">
+            <label for="username">Логин:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+
+            <a href="index.html" class="button back-button">Назад</a>
+            <button type="submit" class="button">Войти</button>
+        </form>
+    </div>
+</body>
+</html>

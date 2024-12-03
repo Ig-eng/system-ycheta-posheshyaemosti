@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель Учителя</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function confirmExit() {
+            let result = confirm("Вы уверены, что хотите выйти?");
+            if (result) {
+                window.location.href = "index.html"; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header-box">
+            <h1>Панель Учителя</h1>
+        </div>
+        <div class="buttons">
+            <a href="#" class="button">Группа</a>
+            <a href="#" class="button">Предмет</a>
+            <a href="#" class="button">Дата</a>
+            <a href="#" class="button">Статистика</a>
+        </div>
+        <a href="javascript:void(0);" class="button back-button" onclick="confirmExit()">Выйти</a> <!-- Обновлено для вызова JavaScript функции -->
+    </div>
+</body>
+</html>
