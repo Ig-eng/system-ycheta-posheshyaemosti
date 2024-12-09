@@ -10,16 +10,16 @@ body {
 
 .container {
     text-align: center;
-    width: 100%; /* Устанавливаем полную ширину */
+    width: 50%; /* Устанавливаем полную ширину */
     padding: 20px; /* Отступы для контейнера */
     box-sizing: border-box; /* Учитываем отступы в ширине */
     margin-top: 50px; /* Отступ сверху для контейнера */
 }
 
 .header-box {
-    background-color: #D3D3D3; /* Серый цвет фона для прямоугольника */
+    background-color: #D3D3D3; 
     padding: 30px; /* Увеличенные отступы */
-    border-radius: 10px; /* Закругление углов */
+    border-radius: 20px; /* Закругление углов */
 }
 
 h1 {
@@ -70,4 +70,30 @@ input {
 .back-button {
     margin-top: 30px; /* Увеличенный отступ сверху для кнопки "Назад" */
     font-size: 2.5em; /* Увеличенный размер шрифта для кнопки "Назад" */
+}
+select, button {
+            font-size: 16px; /* Увеличиваем размер текста */
+            padding: 10px;  /* Увеличиваем внутренние отступы */
+            margin: 5px 0;  /* Отступы между элементами */
+            width: 200px;    /* Ширина кнопок и выпадающих списков */
+            cursor: pointer; /* Курсор при наведении */
+}
+
+button {
+            background-color: #3b5998; /* Цвет фона кнопки */
+            color: white;  /* Цвет текста на кнопке */
+            border: none;  /* Убираем границу */
+            border-radius: 5px; /* Закругляем углы кнопки */
+            transition: background-color 0.3s; /* Эффект при наведении */
+}
+
+button:hover {
+            background-color: #1f2d4b; /* Изменение цвета при наведении */
+}
+
+select, input[type="date"], button {
+            font-size: 18px; /* Увеличиваем размер шрифта для чёткой видимости */
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 1250px; /* Устанавливаем ширину для элементов */
 }

@@ -12,6 +12,20 @@
                 window.location.href = "index.html"; 
             }
         }
+
+        function submitAttendance() {
+            let group = document.getElementById('groups').value;
+            let subject = document.getElementById('subjects').value;
+            let date = document.getElementById('dates').value;
+            let attendees = document.querySelectorAll('input[name="attendance"]');
+            let attendanceList = [];
+            attendees.forEach(function(attendee) {
+                if (attendee.checked) {
+                    attendanceList.push(attendee.value);
+                }
+            });
+            alert(`Группа: ${group}\nПредмет: ${subject}\nДата: ${date}\nПрисутствующие: ${attendanceList.join(', ')}`);
+        }
     </script>
 </head>
 <body>
@@ -20,12 +34,34 @@
             <h1>Панель Учителя</h1>
         </div>
         <div class="buttons">
-            <a href="#" class="button">Группа</a>
-            <a href="#" class="button">Предмет</a>
-            <a href="#" class="button">Дата</a>
-            <a href="#" class="button">Статистика</a>
+            <label for="groups">Группа:</label>
+            <select id="groups">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+            <label for="subjects">Предмет:</label>
+            <select id="subjects">
+                <option value="МДК">МДК</option>
+                <option value="Физ-ра">Физ-ра</option>
+                <option value="УП">УП</option>
+                <option value="Програмирование">Програмирование</option>
+            </select>
+
+            <label for="dates">Дата:</label>
+            <input type="date" id="dates">
+
+            <h3>Студенты:</h3>
+            <div>
+                <input type="checkbox" name="attendance" value="Студент 1">Студент 1<br>
+                <input type="checkbox" name="attendance" value="Студент 2">Студент 2<br>
+                <input type="checkbox" name="attendance" value="Студент 3">Студент 3<br>
+                <input type="checkbox" name="attendance" value="Студент 4">Студент 4<br>
+            </div>
+            <button onclick="submitAttendance()">Отметить посещаемость</button>
         </div>
-        <a href="javascript:void(0);" class="button back-button" onclick="confirmExit()">Выйти</a> <!-- Обновлено для вызова JavaScript функции -->
+        <a href="javascript:void(0);" class="button back-button" onclick="confirmExit()">Выйти</a>
     </div>
 </body>
 </html>

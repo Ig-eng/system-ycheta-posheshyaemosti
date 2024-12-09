@@ -12,20 +12,47 @@
                 window.location.href = "index.html"; 
             }
         }
+
+        function showStats() {
+            const group = document.getElementById("groupSelect").value;
+            const subject = document.getElementById("subjectSelect").value;
+            const date = document.getElementById("dateInput").value;
+
+            // Переход к новой странице с параметрами
+            window.location.href = `stats.html?group=${group}&subject=${subject}&date=${date}`;
+        }
     </script>
 </head>
 <body>
+    <form class="login-form" onsubmit="event.preventDefault(); window.location.href='statistika.html';">
     <div class="container">
         <div class="header-box">
             <h1>Панель Студента</h1>
         </div>
         <div class="buttons">
-            <a href="#" class="button">Группа</a>
-            <a href="#" class="button">Предмет</a>
-            <a href="#" class="button">Дата</a>
-            <a href="#" class="button">Статистика</a>
+            <label for="groupSelect">Выберите группу:</label>
+            <select id="groupSelect">
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3</option>
+                <option value="4"> 4</option>
+            </select>
+
+            <label for="subjectSelect">Выберите предмет:</label>
+            <select id="subjectSelect">
+                <option value="МДК">МДК</option>
+                <option value="Физ-ра">Физ-ра</option>
+                <option value="УП">УП</option>
+                <option value="Программирование">Программирование</option>
+            </select>
+
+            <label for="dateInput">Выберите дату:</label>
+            <input type="date" id="dateInput">
+
+            <button onclick="showStats()" class="button">Показать статистику</button>
         </div>
-        <a href="javascript:void(0);" class="button back-button" onclick="confirmExit()">Выйти</a> <!-- Обновлено для вызова JavaScript функции -->
+
+        <a href="javascript:void(0);" class="button back-button" onclick="confirmExit()">Выйти</a>
     </div>
 </body>
 </html>
