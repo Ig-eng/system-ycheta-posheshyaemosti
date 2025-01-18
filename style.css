@@ -1,1 +1,85 @@
 
+body {
+    font-family: 'Roboto', sans-serif; 
+    background: linear-gradient(to right, #a8c0ff, #3f2b96); 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); 
+}
+
+
+h1 {
+    text-align: center;
+    color: #333; 
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+
+form {
+    display: flex; 
+    flex-direction: column; 
+}
+
+
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="text"],
+select {
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    font-size: 1em; 
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #3f2b96; 
+    outline: none; 
+}
+
+
+button {
+    background-color: #3f2b96; 
+    color: white;
+    border: none;
+    border-radius: 10px; 
+    padding: 15px;
+    font-size: 1.1em;
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #5a4fbb; 
+    transform: translateY(-2px); 
+}
+
+
+a {
+    text-decoration: none; 
+    color: #3f2b96; 
+    font-weight: bold; 
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+a:hover {
+    text-decoration: underline; 
+}
